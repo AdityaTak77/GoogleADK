@@ -1,7 +1,3 @@
-Here's a `README.md` you can include in your project to document **Assignment 1 (Math Assistant Agent)** and **Assignment 2 (Multi-Tool Travel Assistant)** clearly:
-
----
-
 # 🧑‍💻 AI Agent Assignments
 
 This repository contains two assignments focused on building **LLM Agents** that interact with external tools for problem-solving. The goal is to understand **tool usage, decision-making, and orchestration** in AI agent systems.
