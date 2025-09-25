@@ -1,0 +1,118 @@
+Here's a `README.md` you can include in your project to document **Assignment 1 (Math Assistant Agent)** and **Assignment 2 (Multi-Tool Travel Assistant)** clearly:
+
+---
+
+# 🧑‍💻 AI Agent Assignments
+
+This repository contains two assignments focused on building **LLM Agents** that interact with external tools for problem-solving. The goal is to understand **tool usage, decision-making, and orchestration** in AI agent systems.
+
+---
+
+## 📂 Project Structure
+
+```
+.
+├── assignment1
+│   ├── __init__.py
+│   ├── .env
+│   ├── agents.py          # Math Assistant Agent + CalculatorTool
+│
+├── assignement2
+│   ├── __init__.py
+│   ├── .env
+│   ├── travel_agent.py    # Travel Assistant Agent + WeatherTool + FlightTool
+│
+├── requirements.txt
+└── .gitignore
+```
+
+---
+
+## 📝 Assignment 1: Math Assistant Agent
+
+### Problem Definition
+
+Create an **LlmAgent** that can solve **basic math problems** using a **CalculatorTool** instead of relying only on the LLM.
+
+### Features
+
+* **CalculatorTool**: supports addition, subtraction, multiplication, division.
+* The agent parses user queries like:
+
+  * `"What is 12 × 15?"`
+  * `"Add 56 and 89"`
+* If the query is math-related → delegate to the calculator.
+* Otherwise → fallback message:
+
+  > "I can only help with math problems for now."
+
+---
+
+## 📝 Assignment 2: Multi-Tool Travel Assistant
+
+### Problem Definition
+
+Create an **LlmAgent** that helps with **travel-related queries** using multiple tools.
+
+### Tools Implemented
+
+1. **WeatherTool** → returns weather info for a given city (mock or API).
+2. **FlightTool** → returns dummy flight information between two cities.
+
+### Behavior
+
+* User: `"What’s the weather in Paris tomorrow?"` → use **WeatherTool**
+* User: `"Find me a flight from Delhi to Bangalore"` → use **FlightTool**
+* User: `"Plan a weekend trip to Goa"` → use **both tools** (weather + flights) and summarize
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone the repo:
+
+   ```bash
+   git clone <repo-url>
+   cd <repo-folder>
+   ```
+
+2. Create a virtual environment:
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # Mac/Linux
+   venv\Scripts\activate      # Windows
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Add API keys (if required) to `.env` files inside `assignment1/` and `assignment2/`.
+
+---
+
+## 🚀 Usage
+
+### Run Assignment 1 (Math Assistant)
+
+```bash
+cd assignment1
+python agents.py
+```
+
+### Run Assignment 2 (Travel Assistant)
+
+```bash
+cd assignement2
+python travel_agent.py
+## ✅ Learning Outcomes
+
+##adk web
+
+* Understand how LLM Agents **interact with external tools**.
+* Learn **task routing** between reasoning vs. execution.
+* Build simple **multi-tool orchestration** with decision-making.
+* Practice designing **agent pipelines** for real-world tasks.
